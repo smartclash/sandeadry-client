@@ -32,7 +32,7 @@ const App = () => {
                     <HitsComponent />
                 </div>
             </section>
-            <section className="block">
+            <section className="section">
                 <div className="container">
                     <CustomPagination />
                 </div>
