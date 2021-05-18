@@ -11,7 +11,7 @@ export const CustomHighlight = connectHighlight(({ highlight, attribute, hit }) 
         <div>
             {parsedHit.map((part, index) => (
                 part.isHighlighted ? (
-                    <span key={index} className="has-background-link has-text-white p-1">{part.value}</span>
+                    <span key={index} className="has-background-danger-light p-1">{part.value}</span>
                 ) : (
                     <span key={index}>{part.value}</span>
                 )
