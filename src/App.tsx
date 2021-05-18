@@ -1,4 +1,4 @@
-import { InstantSearch } from 'react-instantsearch-dom'
+import { InstantSearch, Stats } from 'react-instantsearch-dom'
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 import SearchBox from './Components/SearchBox/SearchBox'
 import HitsComponent from './Components/Hit/HitComponent'
@@ -19,6 +19,9 @@ const App = () => {
                         <h1 className="title">Sandeadry</h1>
                         <h2 className="subtitle">Search through all sanfoundry's MCQ in milliseconds</h2>
                         <SearchBox />
+                        <div className="mt-4">
+                            <Stats />
+                        </div>
                     </div>
                 </div>
             </section>
