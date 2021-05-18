@@ -26,20 +26,18 @@ const App = () => {
                 </div>
             </section>
             <section className="section">
-                <div className="container">
+                <div className="container-fluid">
                     <CustomMenu attribute="Degrees" />
                 </div>
             </section>
-            <section className="block">
-                <div className="container">
+            <div className="container">
+                <section className="block">
                     <HitsComponent />
-                </div>
-            </section>
-            <section className="section">
-                <div className="container">
+                </section>
+                <section className="section">
                     <CustomPagination />
-                </div>
-            </section>
+                </section>
+            </div>
         </InstantSearch>
     );
 }
