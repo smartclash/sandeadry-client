@@ -85,8 +85,8 @@ const HitHandler = ({ hit }: HitHandlerProps) => {
 
                     <div className="block">
                         <div className="tags is-centered">
-                            {hit.Degrees.map((degree: string) => (
-                                <div className="tag">{degree}</div>
+                            {hit.Degrees.map((degree: string, index: number) => (
+                                <div className="tag" key={index}>{degree}</div>
                             ))}
                         </div>
                     </div>
@@ -117,8 +117,8 @@ const HitHandler = ({ hit }: HitHandlerProps) => {
 const HitsComponent = connectHits(({ hits }) => {
     return (
         <div className="columns is-multiline">
-            {hits.map(hit => (
-                <HitHandler hit={hit} key={hit.objectID} />
+            {hits.map((hit, index) => (
+                <HitHandler hit={hit} key={index} />
             ))}
         </div>
     )
