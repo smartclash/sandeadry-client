@@ -5,7 +5,10 @@ import HitsComponent from './Components/Hit/HitComponent'
 import CustomPagination from './Components/Pagination/Pagination'
 import CustomMenu from './Components/Menu/Menu'
 
-const searchClient = instantMeiliSearch("http://127.0.0.1:7700", "")
+const searchClient = instantMeiliSearch(
+    process.env.REACT_APP_MEILISEARCH_HOST || "",
+    process.env.REACT_APP_MEILISEARCH_KEY || ""
+)
 
 const App = () => {
     return (
