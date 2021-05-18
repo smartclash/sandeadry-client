@@ -13,41 +13,41 @@ const Options = ({ hit }: HitHandlerProps) => {
     return (
         <div>
             {OptionOne ? (
-                <a className={cx("panel-block", {'is-active': Answer == 'a'})}>
+                <a className={cx("panel-block", {'is-active': Answer === 'a'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer == 'a'})}>
+                    <span className={cx({'has-text-link': Answer === 'a'})}>
                         <CustomHighlight attribute="OptionOne" hit={hit} />
                     </span>
                 </a>
             ) : ''}
             {OptionTwo ? (
-                <a className={cx("panel-block", {'is-active': Answer == 'b'})}>
+                <a className={cx("panel-block", {'is-active': Answer === 'b'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer == 'b'})}>
+                    <span className={cx({'has-text-link': Answer === 'b'})}>
                         <CustomHighlight attribute="OptionTwo" hit={hit} />
                     </span>
                 </a>
             ) : ''}
             {OptionThree ? (
-                <a className={cx("panel-block", {'is-active': Answer == 'c'})}>
+                <a className={cx("panel-block", {'is-active': Answer === 'c'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer == 'c'})}>
+                    <span className={cx({'has-text-link': Answer === 'c'})}>
                         <CustomHighlight attribute="OptionThree" hit={hit} />
                     </span>
                 </a>
             ) : ''}
             {OptionFour ? (
-                <a className={cx("panel-block", {'is-active': Answer == 'd'})}>
+                <a className={cx("panel-block", {'is-active': Answer === 'd'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer == 'd'})}>
+                    <span className={cx({'has-text-link': Answer === 'd'})}>
                         <CustomHighlight attribute="OptionFour" hit={hit} />
                     </span>
                 </a>
