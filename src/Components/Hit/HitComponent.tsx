@@ -9,45 +9,46 @@ interface HitHandlerProps {
 
 const Options = ({ hit }: HitHandlerProps) => {
     const {OptionOne, OptionTwo, OptionThree, OptionFour, Answer} = hit
+    const theAnswer = Answer.replace(' ', '')
 
     return (
         <div>
             {OptionOne ? (
-                <a className={cx("panel-block", {'is-active': Answer === 'a'})}>
+                <a className={cx("panel-block", {'is-active': theAnswer === 'a'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer === 'a'})}>
+                    <span className={cx({'has-text-link': theAnswer === 'a'})}>
                         <CustomHighlight attribute="OptionOne" hit={hit} />
                     </span>
                 </a>
             ) : ''}
             {OptionTwo ? (
-                <a className={cx("panel-block", {'is-active': Answer === 'b'})}>
+                <a className={cx("panel-block", {'is-active': theAnswer === 'b'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer === 'b'})}>
+                    <span className={cx({'has-text-link': theAnswer === 'b'})}>
                         <CustomHighlight attribute="OptionTwo" hit={hit} />
                     </span>
                 </a>
             ) : ''}
             {OptionThree ? (
-                <a className={cx("panel-block", {'is-active': Answer === 'c'})}>
+                <a className={cx("panel-block", {'is-active': theAnswer === 'c'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer === 'c'})}>
+                    <span className={cx({'has-text-link': theAnswer === 'c'})}>
                         <CustomHighlight attribute="OptionThree" hit={hit} />
                     </span>
                 </a>
             ) : ''}
             {OptionFour ? (
-                <a className={cx("panel-block", {'is-active': Answer === 'd'})}>
+                <a className={cx("panel-block", {'is-active': theAnswer === 'd'})}>
                     <span className="panel-icon">
                         <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                     </span>
-                    <span className={cx({'has-text-link': Answer === 'd'})}>
+                    <span className={cx({'has-text-link': theAnswer === 'd'})}>
                         <CustomHighlight attribute="OptionFour" hit={hit} />
                     </span>
                 </a>
@@ -117,7 +118,7 @@ const HitsComponent = connectHits(({ hits }) => {
     return (
         <div className="columns is-multiline">
             {hits.map(hit => (
-                <HitHandler hit={hit} />
+                <HitHandler hit={hit} key={hit.objectID} />
             ))}
         </div>
     )
