@@ -116,10 +116,22 @@ const HitHandler = ({ hit }: HitHandlerProps) => {
 
 const HitsComponent = connectHits(({ hits }) => {
     return (
-        <div className="columns is-multiline">
-            {hits.map((hit, index) => (
-                <HitHandler hit={hit} key={index} />
-            ))}
+        <div>
+            {hits.length > 0 ? (
+                <div className="columns is-multiline">
+                    {hits.map((hit, index) => (
+                        <HitHandler hit={hit} key={index} />
+                    ))}
+                </div>
+            ) : (
+                <div className="columns is-mobile is-centered">
+                    <div className="column is-half has-text-centered">
+                        <h1 className="title">
+                            Oops, couldn't find MCQs related to your search
+                        </h1>
+                    </div>
+                </div>
+            )}
         </div>
     )
 })
