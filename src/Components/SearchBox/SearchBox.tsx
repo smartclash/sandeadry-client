@@ -22,6 +22,7 @@ const SearchBox = connectSearchBox(({ currentRefinement, refine, isSearchStalled
                 className="input is-medium" 
                 placeholder="Enter something"
                 value={search}
+                autoFocus
                 onChange={controlSearch} />
             <span className="icon is-left">
                 <FontAwesomeIcon icon={["fas", "search"]} />
