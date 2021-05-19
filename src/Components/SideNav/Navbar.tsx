@@ -22,10 +22,10 @@ const CustomRefinement = connectRefinementList(({ items, refine, createURL }) =>
                         e.preventDefault()
                         refine(item.value)
                     }}>
-                        {item.label} {' '}
                         <div className="tag is-link is-light">
                             {item.count}
-                        </div>
+                        </div> {' '}
+                        {item.label} 
                     </a>
                 </li>
             ))}
@@ -35,17 +35,19 @@ const CustomRefinement = connectRefinementList(({ items, refine, createURL }) =>
 
 const Navbar = () => {
     return (
-        <div className="menu">
+        <div className="menu has-text-right">
             <CustomClearRefinement />
-            <p className="menu-label">
+            <p className="menu-label has-text-weight-bold">
                 Degrees
             </p>
             <CustomRefinement attribute="Degrees" />
-            <p className="menu-label">
+            <hr className="has-text-link" />
+            <p className="menu-label has-text-weight-bold">
                 Subjects
             </p>
             <CustomRefinement attribute="Subject" showMore={true} />
-            <p className="menu-label">
+            <hr />
+            <p className="menu-label has-text-weight-bold">
                 Topics
             </p>
             <CustomRefinement attribute="Topic" showMore={true} />

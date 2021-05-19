@@ -61,6 +61,11 @@ const HitHandler = ({ hit }: HitHandlerProps) => {
     return (
         <div key={hit.id} className="column is-half mt-5">
             <div className="card">
+                <div className="card-header">
+                    <p className="card-header-title has-text-weight-normal">
+                        <CustomHighlight attribute="Subject" hit={hit}  />
+                    </p>
+                </div>
                 <div className="card-content">
                     <div className="block">
                         <p className="title is-size-6">
@@ -92,14 +97,6 @@ const HitHandler = ({ hit }: HitHandlerProps) => {
                     </div>
                 </div>
                 <footer className="card-footer">
-                    <div className="card-footer-item">
-                        <div className="tags has-addons">
-                            <span className="tag is-link is-light">Subject</span>
-                            <span className="tag">
-                                <CustomHighlight attribute="Subject" hit={hit}  />
-                            </span>
-                        </div>
-                    </div>
                     <div className="card-footer-item">
                         <div className="tags has-addons">
                             <span className="tag is-link is-light">Topic</span>

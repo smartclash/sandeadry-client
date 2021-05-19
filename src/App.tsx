@@ -26,23 +26,21 @@ const App = () => {
                 </div>
             </section>
             <div className="container is-fluid">
-                <section className="section">
-                    <div className="columns">
-                        <div className="column is-2">
-                            <Navbar />
-                        </div>
-                        <div className="column is-10">
-                            <section className="block">
-                                <HitsComponent />
-                            </section>
-                        </div>
+                <div className="columns mt-5">
+                    <div className="column is-10">
+                        <HitsComponent />
                     </div>
-                </section>
+                    <div className="column is-2">
+                        <Navbar />
+                    </div>
+                </div>
             </div>
             <footer className="footer">
-                <div className="columns is-mobile is-centered is-vcentered">
-                    <div className="column is-narrow">
-                        <CustomPagination />
+                <div className="container is-fluid">
+                    <div className="columns is-centered is-vcentered">
+                        <div className="column is-narrow-desktop">
+                            <CustomPagination />
+                        </div>
                     </div>
                 </div>
                 <div className="content has-text-centered mt-5">
