@@ -35,15 +35,17 @@ const App = () => {
                             <section className="block">
                                 <HitsComponent />
                             </section>
-                            <section className="section">
-                                <CustomPagination />
-                            </section>
                         </div>
                     </div>
                 </section>
             </div>
             <footer className="footer">
-                <div className="content has-text-centered">
+                <div className="columns is-mobile is-centered is-vcentered">
+                    <div className="column is-narrow">
+                        <CustomPagination />
+                    </div>
+                </div>
+                <div className="content has-text-centered mt-5">
                     <p>
                         <strong>Sandeadry</strong>, an open source software by <a href="https://alphaman.me">Karan Sanjeev</a>.
                     </p>
