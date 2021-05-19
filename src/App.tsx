@@ -16,7 +16,7 @@ const App = () => {
             <section className="hero is-small is-link">
                 <div className="hero-body">
                     <div className="container has-text-centered">
-                        <h1 className="title">Sandeadry</h1>
+                        <h1 className="title">{process.env.REACT_APP_NAME}</h1>
                         <h2 className="subtitle">Search through all sanfoundry's MCQ in milliseconds</h2>
                         <SearchBox />
                         <div className="mt-4">
@@ -47,14 +47,14 @@ const App = () => {
                 </div>
                 <div className="content has-text-centered mt-5">
                     <p>
-                        <strong>Sandeadry</strong>, an open source software by <a href="https://alphaman.me">Karan Sanjeev</a>.
+                        <strong>{process.env.REACT_APP_NAME}</strong>, an open source software by <a href="https://alphaman.me">Karan Sanjeev</a>.
                     </p>
                     <p>
                         Data in this website is solely owned by <a href="https://sanfoundry.com/">Sanfoundry</a>
                     </p>
                     <p>
-                        <a href="https://github.com/smartclash/Sandeadry">Backend Code</a> | {' '}
-                        <a href="https://github.com/smartclash/Sandeadry-client">Client Code</a> | {' '}
+                        <a href={process.env.REACT_APP_BACKEND_GITHUB}>Backend Code</a> | {' '}
+                        <a href={process.env.REACT_APP_FRONTEND_GITHUB}>Client Code</a> | {' '}
                         <a href="https://github.com/smartclash/">GitHub</a> | {' '}
                         <a href="https://twitter.com/xXAlphaManXx">Twitter</a>
                     </p>
