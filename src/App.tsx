@@ -3,7 +3,7 @@ import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 import SearchBox from './Components/SearchBox/SearchBox'
 import HitsComponent from './Components/Hit/HitComponent'
 import CustomPagination from './Components/Pagination/Pagination'
-import CustomMenu from './Components/Menu/Menu'
+import Navbar from './Components/SideNav/Navbar'
 
 const searchClient = instantMeiliSearch(
     process.env.REACT_APP_MEILISEARCH_HOST || "",
@@ -25,19 +25,39 @@ const App = () => {
                     </div>
                 </div>
             </section>
-            <section className="section">
-                <div className="container-fluid">
-                    <CustomMenu attribute="Degrees" />
-                </div>
-            </section>
-            <div className="container">
-                <section className="block">
-                    <HitsComponent />
-                </section>
+            <div className="container is-fluid">
                 <section className="section">
-                    <CustomPagination />
+                    <div className="columns">
+                        <div className="column is-2">
+                            <Navbar />
+                        </div>
+                        <div className="column is-10">
+                            <section className="block">
+                                <HitsComponent />
+                            </section>
+                            <section className="section">
+                                <CustomPagination />
+                            </section>
+                        </div>
+                    </div>
                 </section>
             </div>
+            <footer className="footer">
+                <div className="content has-text-centered">
+                    <p>
+                        <strong>Sandeadry</strong>, an open source software by <a href="https://alphaman.me">Karan Sanjeev</a>.
+                    </p>
+                    <p>
+                        Data in this website is solely owned by <a href="https://sanfoundry.com/">Sanfoundry</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/smartclash/Sandeadry">Backend Code</a> | {' '}
+                        <a href="https://github.com/smartclash/Sandeadry-client">Client Code</a> | {' '}
+                        <a href="https://github.com/smartclash/">GitHub</a> | {' '}
+                        <a href="https://twitter.com/xXAlphaManXx">Twitter</a>
+                    </p>
+                </div>
+            </footer>
         </InstantSearch>
     );
 }
