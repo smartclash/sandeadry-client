@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@meilisearch/instant-meilisearch": "^0.4.2",
     "@types/react-instantsearch-dom": "^6.10.0",
     "bulma": "^0.9.2",
