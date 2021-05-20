@@ -19,6 +19,9 @@ export function Home() {
                 <meta name="theme-color" content="#3273DC" />
                 <meta name="description" content="Search through all sanfoundry's MCQ in milliseconds. Filter through subjects, topics and even degrees" />
                 <title>Choicez | Search through 10 thousand MCQs in seconds</title>
+                {process.env.NEXT_PUBLIC_VERCEL_ENV == 'production' ? (
+                    <script async defer src="https://owo.alphaman.me/latest.js"></script>
+                ) : ''}
             </Head>
             <Configure hitsPerPage={10} />
             <section className="hero is-small is-link">
