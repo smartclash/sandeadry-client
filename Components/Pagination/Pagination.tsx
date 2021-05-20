@@ -34,3 +34,4 @@ const CustomPagination = connectPagination(({ currentRefinement, nbPages, refine
 })
 
 export default CustomPagination
+

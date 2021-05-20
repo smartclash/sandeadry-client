@@ -35,7 +35,7 @@ const CustomRefinement = connectRefinementList(({ items, refine, createURL }) =>
 
 const Navbar = () => {
     return (
-        <div className="menu has-text-right">
+        <div className="menu">
             <CustomClearRefinement />
             <p className="menu-label has-text-weight-bold">
                 Degrees

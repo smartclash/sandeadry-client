@@ -11,4 +11,4 @@ Search through 10K+ MCQs scrapped off [Sanfoundry](https://sanfoundry.com/). Fil
 
 # Contributing
 
-This project uses [`instantsearch-react`](https://github.com/algolia/react-instantsearch/) and custom widgets built upon it. And it's also a basic Create React App. Check out it's [documentation](https://create-react-app.dev/) to get started
+This project uses [`instantsearch-react`](https://github.com/algolia/react-instantsearch/) and custom widgets built upon it. And it's also a basic NextJS App. Check out it's [documentation](https://nextjs.org/) to get started
