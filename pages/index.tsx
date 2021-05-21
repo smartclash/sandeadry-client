@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from '../Components/Sidenav/Navbar'
+import Sidenav from '../Components/Sidenav/Sidenav'
 import SearchBox from '../Components/Searchbox/Searchbox'
 import HitsComponent from '../Components/Hit/HitComponent'
 import Pagination from '../Components/Pagination/Pagination'
@@ -38,21 +38,21 @@ export function Home() {
             <div className="container is-fluid">
                 <div className="columns mt-5">
                     <div className="column is-2 is-hidden-touch">
-                        <Navbar />
+                        <Sidenav />
                     </div>
                     <div className="column is-10">
                         <HitsComponent />
                     </div>
                 </div>
             </div>
-            <footer className="footer">
-                <div className="container is-fluid">
+            <div className="container is-fluid mt-5">
                     <div className="columns is-centered is-vcentered">
                         <div className="column is-narrow-desktop">
                             <Pagination />
                         </div>
                     </div>
-                </div>
+            </div>
+            <footer className="footer">
                 <div className="content has-text-centered mt-5">
                     <p>
                         <strong>{process.env.NEXT_PUBLIC_NAME}</strong>, an open source software by <a href="https://alphaman.me">Karan Sanjeev</a>.

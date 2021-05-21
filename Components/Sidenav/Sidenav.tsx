@@ -33,7 +33,7 @@ const CustomRefinement = connectRefinementList(({ items, refine, createURL }) =>
     )
 })
 
-const Navbar = () => {
+const Sidenav = () => {
     return (
         <div className="menu">
             <CustomClearRefinement />
@@ -55,4 +55,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Sidenav
