@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import { Stats, Configure } from 'react-instantsearch-dom'
 import Navbar from '../Components/Sidenav/Navbar'
-import { withInstantSearch } from 'next-instantsearch'
 import SearchBox from '../Components/Searchbox/Searchbox'
 import HitsComponent from '../Components/Hit/HitComponent'
 import Pagination from '../Components/Pagination/Pagination'
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
+import { Stats, Configure, InstantSearch } from 'react-instantsearch-dom'
 
 const searchClient = instantMeiliSearch(
     process.env.NEXT_PUBLIC_MEILISEARCH_HOST || 'http://127.0.0.1:7700', 
@@ -14,7 +13,7 @@ const searchClient = instantMeiliSearch(
 
 export function Home() {
     return (
-        <div>
+        <InstantSearch indexName="mcqs" searchClient={searchClient}>
             <Head>
                 <meta name="theme-color" content="#3273DC" />
                 <meta name="description" content="Search through all sanfoundry's MCQ in milliseconds. Filter through subjects, topics and even degrees" />
@@ -69,12 +68,8 @@ export function Home() {
                     </p>
                 </div>
             </footer>
-        </div>
+        </InstantSearch>
     )
 }
 
-export default withInstantSearch({
-    indexName: 'mcqs',
-    //@ts-ignore
-    searchClient
-})(Home)
+export default Home
