@@ -9,7 +9,7 @@ interface HitHandlerProps {
 
 const Options = ({ hit }: HitHandlerProps) => {
     const {OptionOne, OptionTwo, OptionThree, OptionFour, Answer} = hit
-    const theAnswer = Answer.replace(' ', '')
+    const theAnswer = Answer.replace(' ', '').trim()
 
     return (
         <div>
