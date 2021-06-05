@@ -7,6 +7,25 @@ const Footer = () => {
           software by <a href="https://alphaman.me">Karan Sanjeev</a>.
         </p>
         <p>
+          <a
+            href="https://simpleanalytics.com/choicez.alphaman.me?utm_source=choicez.alphaman.me&utm_content=badge"
+            target="_blank"
+            className="block"
+          >
+            <img
+              src="https://simpleanalyticsbadge.com/choicez.alphaman.me?mode=dark"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/xXAlphaManXx"
+            target="_blank"
+            className="ml-3"
+          >
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=xXAlphaManXx&button_colour=3273dc&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" />
+          </a>
+        </p>
+        <p>
           Data in this website is solely owned by{" "}
           <a href="https://sanfoundry.com/">Sanfoundry</a>
         </p>

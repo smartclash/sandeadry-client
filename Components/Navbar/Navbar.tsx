@@ -18,6 +18,18 @@ const Navbar = () => {
                 <span>Github</span>
               </a>
             </div>
+            <div className="navbar-item">
+              <a
+                className="button is-danger is-inverted"
+                href="https://www.buymeacoffee.com/xXAlphaManXx"
+                target="_newtab"
+              >
+                <span className="icon">
+                  <FontAwesomeIcon icon={["fas", "donate"]} />
+                </span>
+                <span>Donate</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
