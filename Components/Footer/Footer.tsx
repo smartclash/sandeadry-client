@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer mt-5 has-background-link-light">
       <div className="content has-text-centered mt-5">
         <p>
           <strong>{process.env.NEXT_PUBLIC_NAME}</strong>, an open source
