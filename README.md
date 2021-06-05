@@ -6,7 +6,7 @@ Search through 10K+ MCQs scrapped off [Sanfoundry](https://sanfoundry.com/). Fil
 
 # Backend
 
-- The MCQs are indexed into [Meilisearch](https://meilisearch.com/) which provides near instant search experience. 
+- The MCQs are indexed into [Meilisearch](https://meilisearch.com/) which provides near instant search experience.
 - MCQs are scrapped by [Sandeadry-backend](https://github.com/smartclash/Sandeadry). It's written purely in [golang](https://golang.org/).
 
 # Contributing
