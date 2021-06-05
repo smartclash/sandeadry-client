@@ -9,7 +9,7 @@ export const CustomHighlight = connectHighlight(
     });
 
     return (
-      <div>
+      <span>
         {parsedHit.map((part, index) =>
           part.isHighlighted ? (
             <span key={index} className="has-background-danger-light p-1">
@@ -19,7 +19,7 @@ export const CustomHighlight = connectHighlight(
             <span key={index}>{part.value}</span>
           )
         )}
-      </div>
+      </span>
     );
   }
 );
