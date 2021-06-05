@@ -7,18 +7,16 @@ const Navbar = () => {
         <div className="navbar-menu">
           <div className="navbar-end">
             <div className="navbar-item">
-              <button
+              <a
                 className="button is-info is-inverted"
-                onClick={(_) => {
-                  const theHeight = document.body.scrollHeight;
-                  window.scrollTo({ top: theHeight, behavior: "smooth" });
-                }}
+                href={process.env.NEXT_PUBLIC_FRONTEND_GITHUB}
+                target="_newtab"
               >
                 <span className="icon">
                   <FontAwesomeIcon icon={["fab", "github"]} />
                 </span>
                 <span>Github</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
